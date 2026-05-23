@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace — AJ FOOTZ</title>
+  <meta name="description" content="Shop all AJ FOOTZ products. Add to cart and order via WhatsApp.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Announcement Bar (Scrolling) -->
+<div class="marketplace-announcement">
+  <div class="marquee-track">
+    <span>✦ New arrivals every week</span>
+    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
+    <span>All pieces are 100% handcrafted in Kaduna, Nigeria 🇳🇬</span>
+    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
+    <span>FREE delivery on orders above ₦100,000</span>
+    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
+    <span>Custom orders welcome — DM @AJFootz on Instagram</span>
+    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
+    <span>Men's sizes 40-45 | Women's sizes 37-40 | Custom sizing available</span>
+    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
+    <span>We deliver to all 36 states in Nigeria</span>
+    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
+    <span>✦ New arrivals every week</span>
+    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
+    <span>All pieces are 100% handcrafted in Kaduna, Nigeria 🇳🇬</span>
+    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
+    <span>FREE delivery on orders above ₦100,000</span>
+    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
+    <span>Custom orders welcome — DM @AJFootz on Instagram</span>
+    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
+    <span>Men's sizes 40-45 | Women's sizes 37-40 | Custom sizing available</span>
+    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
+    <span>We deliver to all 36 states in Nigeria</span>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav id="mainNavbar" class="navbar navbar-expand-lg scrolled">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">AJ FOOTZ <span class="brand-dot"></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="fas fa-bars" style="color:var(--gold)"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link active" href="marketplace.html">Marketplace</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <a href="https://instagram.com/ajfootz" target="_blank" style="color:var(--gray);font-size:1.1rem">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="contact.html#custom" class="btn btn-gold btn-sm">Custom Order</a>
+        <button class="btn btn-outline-gold btn-sm position-relative" onclick="openCartSidebar()">
+          <i class="fas fa-shopping-bag me-1"></i>Cart
+          <span class="cart-count count-badge" style="display:none">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<div class="page-hero" style="padding:80px 0 50px">
+  <div class="container">
+    <div class="breadcrumb-custom">
+      <a href="index.html">Home</a><span>/</span>Marketplace
+    </div>
+    <h1 class="section-title">AJ FOOTZ <span class="accent">Marketplace</span></h1>
+    <div class="gold-line center"></div>
+    <p style="color:var(--gray);max-width:500px;margin:0 auto;font-size:.88rem">
+      Browse, pick your size, add to cart — then send your full order to WhatsApp in one tap.
+    </p>
+  </div>
+</div>
+
+<!-- Filter & Search -->
+<div style="background:var(--black-soft);border-bottom:1px solid var(--border);padding:20px 0;position:sticky;top:73px;z-index:100">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+      <div class="filter-tabs" style="margin-bottom:0">
+        <button class="filter-btn active" data-filter="all">All Products</button>
+        <button class="filter-btn" data-filter="shoes">Men's Sandals</button>
+        <button class="filter-btn" data-filter="bags">Women's Bags</button>
+      </div>
+      <div class="search-wrap" style="min-width:220px">
+        <i class="fas fa-search"></i>
+        <input type="text" id="productSearch" class="form-control search-input" placeholder="Search products...">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Products Grid -->
+<section style="padding:50px 0 90px">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <p style="color:var(--gray);font-size:.82rem;margin:0" id="productCount">Showing 16 products</p>
+      <div style="color:var(--gray);font-size:.8rem">
+        <i class="fas fa-shopping-bag me-1" style="color:var(--gold)"></i>
+        Add to cart → Proceed to WhatsApp to order
+      </div>
+    </div>
+    <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4" id="marketplaceGrid"></div>
+  </div>
+</section>
+
+<!-- Cart Overlay & Sidebar -->
+<div id="cartOverlay" onclick="closeCartSidebar()"></div>
+<div id="cartSidebar">
+  <div class="cart-header">
+    <h5><i class="fas fa-shopping-bag me-2" style="color:var(--gold)"></i>My Cart</h5>
+    <button class="cart-close" onclick="closeCartSidebar()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <div id="cartEmpty">
+      <i class="fas fa-shopping-bag d-block"></i>
+      <p>Your cart is empty.<br>Add some products!</p>
+    </div>
+    <div id="cartItems"></div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-amount" id="cartTotal">₦0</span>
+    </div>
+    <div style="font-size:.72rem;color:var(--gray);margin-bottom:12px">
+      <i class="fas fa-info-circle me-1"></i>Delivery fee calculated at checkout
+    </div>
+    <button class="btn btn-gold w-100 mb-2" onclick="proceedToWhatsApp()">
+      <i class="fab fa-whatsapp me-2"></i>Proceed to WhatsApp
+    </button>
+    <button class="btn btn-outline-gold w-100 btn-sm" onclick="clearCart();updateCartUI()">
+      <i class="fas fa-trash me-1"></i>Clear Cart
+    </button>
+  </div>
+</div>
+
+<!-- Floating Cart Button -->
+<button class="cart-float-btn" onclick="openCartSidebar()" title="View Cart">
+  <i class="fas fa-shopping-bag"></i>
+  <span class="cart-count count-badge" style="display:none">0</span>
+</button>
+
+<!-- Toast Notification -->
+<div class="cart-toast" id="cartToast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Render all products with Add to Cart
+  function renderMarketplace(products) {
+    const grid = document.getElementById("marketplaceGrid");
+    const count = document.getElementById("productCount");
+    if (!grid) return;
+    if (products.length === 0) {
+      grid.innerHTML = `<div class="col-12 text-center py-5" style="color:var(--gray)">
+        <i class="fas fa-search" style="font-size:2rem;margin-bottom:16px;color:var(--border);display:block"></i>
+        No products found.
+      </div>`;
+      if (count) count.textContent = "No products found";
+      return;
+    }
+    if (count) count.textContent = `Showing ${products.length} product${products.length !== 1 ? "s" : ""}`;
+    grid.innerHTML = products.map(product => {
+      const badgeHTML = product.badge ? `<span class="product-badge">${product.badge}</span>` : "";
+      return `
+        <div class="col product-card-wrap" data-cat="${product.category}" data-name="${product.name.toLowerCase()}">
+          <div class="product-card reveal">
+            ${badgeHTML}
+            <div class="product-img-wrap">
+              <img src="${product.image}" alt="${product.name}" class="product-img" loading="lazy">
+              <div class="product-overlay">
+                <p class="product-desc-preview">${product.description}</p>
+              </div>
+            </div>
+            <div class="product-info">
+              <h5 class="product-name">${product.name}</h5>
+              <div class="product-price">${formatPrice(product.price)}</div>
+              <select class="form-select size-select" id="size-${product.id}">
+                <option value="">Select Size</option>
+                ${product.sizes.map(s => `<option value="${s}">${s}</option>`).join("")}
+              </select>
+              <div class="d-flex gap-2 align-items-center mb-2">
+                <button class="qty-btn" onclick="changeProductQty(${product.id}, -1)">−</button>
+                <span class="qty-val" id="qty-${product.id}">1</span>
+                <button class="qty-btn" onclick="changeProductQty(${product.id}, 1)">+</button>
+              </div>
+              <button class="btn btn-gold w-100"
+                onclick="addToCart(${product.id}, document.getElementById('size-${product.id}').value, parseInt(document.getElementById('qty-${product.id}').textContent))">
+                <i class="fas fa-shopping-bag me-2"></i>Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>`;
+    }).join("");
+
+    // Re-run reveal observer
+    setTimeout(() => {
+      document.querySelectorAll(".reveal").forEach(el => {
+        el.classList.add("visible");
+      });
+    }, 100);
+  }
+
+  // Per-product qty selector
+  function changeProductQty(productId, delta) {
+    const el = document.getElementById(`qty-${productId}`);
+    if (!el) return;
+    let val = parseInt(el.textContent) + delta;
+    if (val < 1) val = 1;
+    el.textContent = val;
+  }
+
+  // Filter override for search
+  const origFilter = filterProducts;
+  function filterProducts(cat) {
+    const cards = document.querySelectorAll(".product-card-wrap");
+    let visible = 0;
+    cards.forEach(card => {
+      const cardCat = card.dataset.cat;
+      const show = cat === "all" || cardCat === cat;
+      card.style.display = show ? "" : "none";
+      if (show) visible++;
+    });
+    const count = document.getElementById("productCount");
+    if (count) count.textContent = `Showing ${visible} product${visible !== 1 ? "s" : ""}`;
+  }
+
+  // Init
+  renderMarketplace(AJ_PRODUCTS);
+
+  // Search with count update
+  document.getElementById("productSearch")?.addEventListener("input", function() {
+    const q = this.value.toLowerCase();
+    const cards = document.querySelectorAll(".product-card-wrap");
+    let visible = 0;
+    cards.forEach(card => {
+      const name = card.dataset.name || "";
+      const show = name.includes(q);
+      card.style.display = show ? "" : "none";
+      if (show) visible++;
+    });
+    const count = document.getElementById("productCount");
+    if (count) count.textContent = `Showing ${visible} product${visible !== 1 ? "s" : ""}`;
+  });
+</script>
+</body>
+</html>
