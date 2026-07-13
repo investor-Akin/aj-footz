@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ladies' Special — AJ FOOTZ</title>
+  <meta name="description" content="Ladies' Special Collection — handcrafted slides, bags and combo sets by AJ FOOTZ. Kaduna, Nigeria.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  <div class="marquee-track">
+    <span>✦ Ladies' Special — Slides, Bags & Combo Sets</span>
+    <span class="dot">◆</span>
+    <span>✦ All pieces 100% Handcrafted in Kaduna, Nigeria 🇳🇬</span>
+    <span class="dot">◆</span>
+    <span>✦ Women's sizes 37–40 | Custom sizing available</span>
+    <span class="dot">◆</span>
+    <span>✦ FREE delivery on orders above ₦100,000</span>
+    <span class="dot">◆</span>
+    <span>✦ Ladies' Special — Slides, Bags & Combo Sets</span>
+    <span class="dot">◆</span>
+    <span>✦ All pieces 100% Handcrafted in Kaduna, Nigeria 🇳🇬</span>
+    <span class="dot">◆</span>
+    <span>✦ Women's sizes 37–40 | Custom sizing available</span>
+    <span class="dot">◆</span>
+    <span>✦ FREE delivery on orders above ₦100,000</span>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav id="mainNavbar" class="navbar navbar-expand-lg scrolled">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">AJ FOOTZ <span class="brand-dot"></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="fas fa-bars" style="color:var(--gold)"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="marketplace.html">Men's Shop</a></li>
+        <li class="nav-item"><a class="nav-link active" href="ladies.html">Ladies' Special</a></li>
+        <li class="nav-item"><a class="nav-link" href="couples.html">Couples</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <a href="https://instagram.com/ajfootz" target="_blank" style="color:var(--gray);font-size:1.1rem">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="contact.html#custom" class="btn btn-gold btn-sm">Custom Order</a>
+        <button class="btn btn-outline-gold btn-sm position-relative" onclick="openCartSidebar()">
+          <i class="fas fa-shopping-bag me-1"></i>Cart
+          <span class="cart-count count-badge" style="display:none">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Ladies Hero -->
+<section class="ladies-hero">
+  <div class="container" style="position:relative;z-index:1">
+    <div class="breadcrumb-custom">
+      <a href="index.html">Home</a><span>/</span>Ladies' Special
+    </div>
+    <p class="section-subtitle">Handcrafted for Her</p>
+    <h1 class="section-title" style="font-size:clamp(2rem,5vw,3.5rem)">
+      Ladies' <span class="accent">Special</span> Collection
+    </h1>
+    <div class="gold-line"></div>
+    <p style="color:var(--gray);max-width:480px;font-size:.88rem;margin-bottom:28px">
+      Slides, bags and matching combo sets — every piece handcrafted with love in Kaduna. 
+      Pick your size, add to cart, and order straight to WhatsApp.
+    </p>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#products" class="btn btn-gold">Shop Now</a>
+      <a href="contact.html#custom" class="btn btn-outline-gold">Custom Order</a>
+    </div>
+  </div>
+</section>
+
+<!-- Filter & Search -->
+<div style="background:var(--black-soft);border-bottom:1px solid var(--border);padding:20px 0;position:sticky;top:73px;z-index:100" id="products">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+      <div class="d-flex flex-wrap gap-2">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="combo">Combo Sets</button>
+        <button class="filter-btn" data-filter="slide">Solo Slides</button>
+        <button class="filter-btn" data-filter="bags">Bags</button>
+      </div>
+      <div class="search-wrap" style="min-width:220px">
+        <i class="fas fa-search"></i>
+        <input type="text" id="ladiesSearch" class="form-control search-input" placeholder="Search ladies collection...">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Products Grid -->
+<section style="padding:50px 0 90px;background:var(--black)">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <p style="color:var(--gray);font-size:.82rem;margin:0" id="ladiesCount"></p>
+      <div style="color:var(--gray);font-size:.8rem">
+        <i class="fas fa-heart me-1" style="color:#e91e8c"></i>
+        Add to cart → Send order to WhatsApp
+      </div>
+    </div>
+    <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4" id="ladiesGrid"></div>
+  </div>
+</section>
+
+<!-- Custom Order CTA -->
+<div class="custom-order-banner">
+  <div class="container reveal">
+    <h2>Don't See Your Style? <br><em style="font-style:italic">We'll Craft It For You.</em></h2>
+    <p>Custom slides and bags made to your exact taste. Any size. Any colour. Any design.</p>
+    <a href="contact.html#custom" class="btn">Request Custom Order <i class="fas fa-arrow-right ms-2"></i></a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">AJ FOOTZ</div>
+        <p class="footer-tagline">"Step on luxury and walk into Grace"</p>
+        <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.8;margin-bottom:20px">
+          Handcrafted footwear and bags from Kaduna, Nigeria. Style. Comfort. Culture. 🇳🇬
+        </p>
+        <div class="footer-social">
+          <a href="https://instagram.com/ajfootz" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/2348000000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="marketplace.html">Men's Shop</a></li>
+          <li><a href="ladies.html">Ladies' Special</a></li>
+          <li><a href="couples.html">Couples</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Collections</div>
+        <ul class="footer-links">
+          <li><a href="marketplace.html">Men's Sandals</a></li>
+          <li><a href="ladies.html">Ladies' Slides</a></li>
+          <li><a href="ladies.html">Ladies' Bags</a></li>
+          <li><a href="couples.html">Couples Sets</a></li>
+          <li><a href="contact.html#custom">Custom Orders</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-heading">Get In Touch</div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Kaduna State, Nigeria</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+234 800 000 0000 (Demo)</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>hello@ajfootz.com (Demo)</span></div>
+        <div class="footer-contact-item"><i class="fab fa-instagram"></i><span>@ajfootz — Preferred contact</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span>AJ FOOTZ</span>. All rights reserved. | Handcrafted with ❤️ in Kaduna, Nigeria 🇳🇬</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart System -->
+<div id="cartOverlay" onclick="closeCartSidebar()"></div>
+<div id="cartSidebar">
+  <div class="cart-header">
+    <h5><i class="fas fa-shopping-bag me-2" style="color:var(--gold)"></i>My Cart</h5>
+    <button class="cart-close" onclick="closeCartSidebar()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <div id="cartEmpty">
+      <i class="fas fa-shopping-bag d-block"></i>
+      <p>Your cart is empty.<br>Add some products!</p>
+    </div>
+    <div id="cartItems"></div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-amount" id="cartTotal">₦0</span>
+    </div>
+    <div style="font-size:.72rem;color:var(--gray);margin-bottom:12px">
+      <i class="fas fa-info-circle me-1"></i>Delivery fee calculated at checkout
+    </div>
+    <button class="btn btn-gold w-100 mb-2" onclick="proceedToWhatsApp()">
+      <i class="fab fa-whatsapp me-2"></i>Proceed to WhatsApp
+    </button>
+    <button class="btn btn-outline-gold w-100 btn-sm" onclick="clearCart();updateCartUI()">
+      <i class="fas fa-trash me-1"></i>Clear Cart
+    </button>
+  </div>
+</div>
+<button class="cart-float-btn" onclick="openCartSidebar()">
+  <i class="fas fa-shopping-bag"></i>
+  <span class="cart-count count-badge" style="display:none">0</span>
+</button>
+<div class="cart-toast" id="cartToast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const ladiesProducts = AJ_PRODUCTS.filter(p => p.category === "ladies");
+
+  function renderLadies(products) {
+    const grid = document.getElementById("ladiesGrid");
+    const count = document.getElementById("ladiesCount");
+    if (!grid) return;
+    if (count) count.textContent = `Showing ${products.length} item${products.length !== 1 ? "s" : ""}`;
+
+    grid.innerHTML = products.map(p => {
+      const isCombo = p.subcat === "combo";
+      const badgeHTML = p.badge ? `<span class="product-badge">${p.badge}</span>` : "";
+      const comboTag = isCombo ? `<span class="combo-badge">Slide + Bag Set</span>` : "";
+      return `
+        <div class="col ladies-card-wrap" data-sub="${p.subcat||''}" data-name="${p.name.toLowerCase()}">
+          <div class="product-card reveal">
+            ${badgeHTML}${comboTag}
+            <div class="product-img-wrap">
+              <img src="${p.image}" alt="${p.name}" class="product-img" loading="lazy">
+              <div class="product-overlay"><p class="product-desc-preview">${p.description}</p></div>
+            </div>
+            <div class="product-info">
+              <h5 class="product-name">${p.name}</h5>
+              ${isCombo ? '<div style="font-size:.7rem;color:#e91e8c;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.08em">✦ Includes Slide + Bag</div>' : ''}
+              <div class="product-price">${formatPrice(p.price)}</div>
+              ${p.sizes ? `
+              <select class="form-select size-select" id="size-${p.id}">
+                <option value="">Select Size</option>
+                ${p.sizes.map(s => `<option value="${s}">${s}</option>`).join("")}
+              </select>` : ''}
+              <div class="d-flex gap-2 align-items-center mb-2">
+                <button class="qty-btn" onclick="changeLadiesQty(${p.id}, -1)">−</button>
+                <span class="qty-val" id="qty-${p.id}">1</span>
+                <button class="qty-btn" onclick="changeLadiesQty(${p.id}, 1)">+</button>
+              </div>
+              <button class="btn btn-gold w-100"
+                onclick="addToCart(${p.id}, ${p.sizes ? `document.getElementById('size-${p.id}').value` : "'One Size'"}, parseInt(document.getElementById('qty-${p.id}').textContent))">
+                <i class="fas fa-shopping-bag me-2"></i>Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>`;
+    }).join("");
+    setTimeout(() => document.querySelectorAll(".reveal").forEach(e => e.classList.add("visible")), 100);
+  }
+
+  function changeLadiesQty(id, d) {
+    const el = document.getElementById(`qty-${id}`);
+    if (!el) return;
+    let v = parseInt(el.textContent) + d;
+    if (v < 1) v = 1;
+    el.textContent = v;
+  }
+
+  // Filter
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const f = btn.dataset.filter;
+      const filtered = f === "all" ? ladiesProducts : ladiesProducts.filter(p => p.subcat === f);
+      renderLadies(filtered);
+    });
+  });
+
+  // Search
+  document.getElementById("ladiesSearch")?.addEventListener("input", function() {
+    const q = this.value.toLowerCase();
+    const filtered = ladiesProducts.filter(p => p.name.toLowerCase().includes(q));
+    renderLadies(filtered);
+  });
+
+  renderLadies(ladiesProducts);
+</script>
+</body>
+</html>

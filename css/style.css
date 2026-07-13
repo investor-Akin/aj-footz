@@ -1117,3 +1117,81 @@ img { max-width: 100%; }
 
 /* ─── Selection ───────────────────────────────────────────────────────────── */
 ::selection { background: rgba(201,169,98,0.2); color: var(--cream); }
+
+/* ─── Ladies' Special Page ────────────────────────────────────────────────── */
+.ladies-hero {
+  min-height: 45vh;
+  background: linear-gradient(135deg, #FDF0F5 0%, #FAF3E8 100%);
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+.ladies-hero::before {
+  content: '♀';
+  position: absolute; right: -40px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 18rem;
+  color: rgba(201,169,98,0.05);
+  pointer-events: none;
+}
+
+.combo-badge {
+  position: absolute; top: 12px; right: 12px;
+  background: linear-gradient(135deg, #e91e8c, #c2185b);
+  color: #fff; font-size: 0.6rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 2px; z-index: 2;
+}
+
+.product-card.ladies-card:hover {
+  border-color: #e91e8c44;
+}
+
+/* ─── Couples Page ────────────────────────────────────────────────────────── */
+.couples-hero {
+  min-height: 45vh;
+  background: linear-gradient(135deg, #FDF6E8 0%, #FAF3E0 100%);
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+.couples-hero::before {
+  content: '♥';
+  position: absolute; right: -40px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 18rem;
+  color: rgba(201,169,98,0.06);
+  pointer-events: none;
+}
+
+.couple-size-row {
+  display: flex; gap: 8px; margin-bottom: 8px;
+}
+.couple-size-row .size-label {
+  font-size: 0.68rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--gray); min-width: 28px;
+  padding-top: 9px;
+}
+.couple-size-row .size-select { flex: 1; }
+
+.couple-tag {
+  position: absolute; top: 12px; left: 12px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #fff; font-size: 0.6rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 2px; z-index: 2;
+}
+
+/* ─── Sub-filter tabs ─────────────────────────────────────────────────────── */
+.subfilter-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 28px; }
+.subfilter-btn {
+  background: transparent; border: 1px solid var(--border);
+  color: var(--gray); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 20px; cursor: pointer;
+  transition: var(--transition);
+}
+.subfilter-btn:hover, .subfilter-btn.active {
+  background: var(--gold); border-color: var(--gold); color: #fff;
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Couples Collection — AJ FOOTZ</title>
+  <meta name="description" content="AJ FOOTZ Couples Collection — matching his and hers handcrafted slides. Order together, step together.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  <div class="marquee-track">
+    <span>✦ Couples Collection — Step Together in Style</span>
+    <span class="dot">◆</span>
+    <span>✦ His & Hers matching slides — handcrafted in Kaduna 🇳🇬</span>
+    <span class="dot">◆</span>
+    <span>✦ Select his size + her size and order together</span>
+    <span class="dot">◆</span>
+    <span>✦ FREE delivery on orders above ₦100,000</span>
+    <span class="dot">◆</span>
+    <span>✦ Couples Collection — Step Together in Style</span>
+    <span class="dot">◆</span>
+    <span>✦ His & Hers matching slides — handcrafted in Kaduna 🇳🇬</span>
+    <span class="dot">◆</span>
+    <span>✦ Select his size + her size and order together</span>
+    <span class="dot">◆</span>
+    <span>✦ FREE delivery on orders above ₦100,000</span>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav id="mainNavbar" class="navbar navbar-expand-lg scrolled">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">AJ FOOTZ <span class="brand-dot"></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="fas fa-bars" style="color:var(--gold)"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="marketplace.html">Men's Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="ladies.html">Ladies' Special</a></li>
+        <li class="nav-item"><a class="nav-link active" href="couples.html">Couples</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <a href="https://instagram.com/ajfootz" target="_blank" style="color:var(--gray);font-size:1.1rem">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="contact.html#custom" class="btn btn-gold btn-sm">Custom Order</a>
+        <button class="btn btn-outline-gold btn-sm position-relative" onclick="openCartSidebar()">
+          <i class="fas fa-shopping-bag me-1"></i>Cart
+          <span class="cart-count count-badge" style="display:none">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Couples Hero -->
+<section class="couples-hero">
+  <div class="container" style="position:relative;z-index:1">
+    <div class="breadcrumb-custom">
+      <a href="index.html">Home</a><span>/</span>Couples Collection
+    </div>
+    <p class="section-subtitle" style="color:var(--gold-dark)">Step Together in Style</p>
+    <h1 class="section-title" style="font-size:clamp(2rem,5vw,3.5rem)">
+      Couples <span class="accent">Collection</span>
+    </h1>
+    <div class="gold-line"></div>
+    <p style="color:var(--gray);max-width:500px;font-size:.88rem;margin-bottom:28px">
+      Matching his-and-hers handcrafted slides — because great style is even better when shared. 
+      Select his size, her size, and order as a set.
+    </p>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#couples-products" class="btn btn-gold">
+        <i class="fas fa-heart me-2"></i>Shop Couple Sets
+      </a>
+      <a href="contact.html#custom" class="btn btn-outline-gold">Custom Couple Set</a>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<div style="background:var(--card-bg);border-bottom:1px solid var(--border);padding:28px 0">
+  <div class="container">
+    <div class="row g-3 text-center">
+      <div class="col-md-4">
+        <div style="color:var(--gold-dark);font-size:1.2rem;margin-bottom:6px"><i class="fas fa-search"></i></div>
+        <div style="font-size:.82rem;font-weight:600;color:var(--cream);margin-bottom:4px">1. Choose Your Set</div>
+        <div style="font-size:.75rem;color:var(--gray)">Browse matching couple sets</div>
+      </div>
+      <div class="col-md-4">
+        <div style="color:var(--gold-dark);font-size:1.2rem;margin-bottom:6px"><i class="fas fa-ruler"></i></div>
+        <div style="font-size:.82rem;font-weight:600;color:var(--cream);margin-bottom:4px">2. Select Both Sizes</div>
+        <div style="font-size:.75rem;color:var(--gray)">Pick his size (40–45) and her size (37–40)</div>
+      </div>
+      <div class="col-md-4">
+        <div style="color:var(--gold-dark);font-size:1.2rem;margin-bottom:6px"><i class="fab fa-whatsapp"></i></div>
+        <div style="font-size:.82rem;font-weight:600;color:var(--cream);margin-bottom:4px">3. Order via WhatsApp</div>
+        <div style="font-size:.75rem;color:var(--gray)">Your full order is sent to us instantly</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Couples Products -->
+<section style="padding:60px 0 90px;background:var(--black)" id="couples-products">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-subtitle reveal">His & Hers</p>
+      <h2 class="section-title reveal">Matching <span class="accent">Sets</span></h2>
+      <div class="gold-line center"></div>
+    </div>
+    <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3" id="couplesGrid"></div>
+  </div>
+</section>
+
+<!-- Custom Couple CTA -->
+<section style="background:linear-gradient(135deg,#FDF6E8,#FAF3E0);padding:70px 0;border-top:1px solid var(--border)">
+  <div class="container text-center reveal">
+    <i class="fas fa-heart" style="font-size:2rem;color:var(--gold-dark);margin-bottom:16px;display:block"></i>
+    <h2 class="section-title mb-3">Want a <span class="accent">Custom</span> Couple Set?</h2>
+    <p style="color:var(--gray);max-width:500px;margin:0 auto 28px;font-size:.88rem">
+      Tell us your color, style, and sizes — we'll craft a matching pair just for you two.
+      Perfect for anniversaries, weddings, and special occasions.
+    </p>
+    <a href="contact.html#custom" class="btn btn-gold btn-lg-gold">
+      <i class="fas fa-heart me-2"></i>Request Custom Couple Set
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">AJ FOOTZ</div>
+        <p class="footer-tagline">"Step on luxury and walk into Grace"</p>
+        <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.8;margin-bottom:20px">
+          Handcrafted footwear and bags from Kaduna, Nigeria. Style. Comfort. Culture. 🇳🇬
+        </p>
+        <div class="footer-social">
+          <a href="https://instagram.com/ajfootz" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/2348000000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="marketplace.html">Men's Shop</a></li>
+          <li><a href="ladies.html">Ladies' Special</a></li>
+          <li><a href="couples.html">Couples</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Collections</div>
+        <ul class="footer-links">
+          <li><a href="marketplace.html">Men's Sandals</a></li>
+          <li><a href="ladies.html">Ladies' Slides</a></li>
+          <li><a href="ladies.html">Ladies' Bags</a></li>
+          <li><a href="couples.html">Couples Sets</a></li>
+          <li><a href="contact.html#custom">Custom Orders</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-heading">Get In Touch</div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Kaduna State, Nigeria</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+234 800 000 0000 (Demo)</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>hello@ajfootz.com (Demo)</span></div>
+        <div class="footer-contact-item"><i class="fab fa-instagram"></i><span>@ajfootz — Preferred contact</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span>AJ FOOTZ</span>. All rights reserved. | Handcrafted with ❤️ in Kaduna, Nigeria 🇳🇬</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart System -->
+<div id="cartOverlay" onclick="closeCartSidebar()"></div>
+<div id="cartSidebar">
+  <div class="cart-header">
+    <h5><i class="fas fa-shopping-bag me-2" style="color:var(--gold)"></i>My Cart</h5>
+    <button class="cart-close" onclick="closeCartSidebar()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <div id="cartEmpty">
+      <i class="fas fa-shopping-bag d-block"></i>
+      <p>Your cart is empty.<br>Add some products!</p>
+    </div>
+    <div id="cartItems"></div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-amount" id="cartTotal">₦0</span>
+    </div>
+    <div style="font-size:.72rem;color:var(--gray);margin-bottom:12px">
+      <i class="fas fa-info-circle me-1"></i>Delivery fee calculated at checkout
+    </div>
+    <button class="btn btn-gold w-100 mb-2" onclick="proceedToWhatsApp()">
+      <i class="fab fa-whatsapp me-2"></i>Proceed to WhatsApp
+    </button>
+    <button class="btn btn-outline-gold w-100 btn-sm" onclick="clearCart();updateCartUI()">
+      <i class="fas fa-trash me-1"></i>Clear Cart
+    </button>
+  </div>
+</div>
+<button class="cart-float-btn" onclick="openCartSidebar()">
+  <i class="fas fa-shopping-bag"></i>
+  <span class="cart-count count-badge" style="display:none">0</span>
+</button>
+<div class="cart-toast" id="cartToast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const coupleProducts = AJ_PRODUCTS.filter(p => p.category === "couples");
+
+  function renderCouples(products) {
+    const grid = document.getElementById("couplesGrid");
+    if (!grid) return;
+    grid.innerHTML = products.map(p => {
+      const badgeHTML = p.badge ? `<span class="product-badge">${p.badge}</span>` : "";
+      return `
+        <div class="col">
+          <div class="product-card reveal">
+            ${badgeHTML}
+            <span class="couple-tag">♥ Couple Set</span>
+            <div class="product-img-wrap" style="aspect-ratio:4/3">
+              <img src="${p.image}" alt="${p.name}" class="product-img" loading="lazy">
+              <div class="product-overlay"><p class="product-desc-preview">${p.description}</p></div>
+            </div>
+            <div class="product-info">
+              <h5 class="product-name">${p.name}</h5>
+              <div style="font-size:.7rem;color:var(--gold-dark);font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">
+                ♥ His + Hers Matching Set
+              </div>
+              <div class="product-price">${formatPrice(p.price)}</div>
+              <div class="couple-size-row">
+                <span class="size-label">His</span>
+                <select class="form-select size-select" id="his-${p.id}">
+                  <option value="">Size</option>
+                  ${p.hisSize.map(s => `<option value="${s}">${s}</option>`).join("")}
+                </select>
+              </div>
+              <div class="couple-size-row">
+                <span class="size-label">Hers</span>
+                <select class="form-select size-select" id="her-${p.id}">
+                  <option value="">Size</option>
+                  ${p.herSize.map(s => `<option value="${s}">${s}</option>`).join("")}
+                </select>
+              </div>
+              <div class="d-flex gap-2 align-items-center mb-2 mt-2">
+                <button class="qty-btn" onclick="changeCoupleQty(${p.id}, -1)">−</button>
+                <span class="qty-val" id="cqty-${p.id}">1</span>
+                <button class="qty-btn" onclick="changeCoupleQty(${p.id}, 1)">+</button>
+              </div>
+              <button class="btn btn-gold w-100" onclick="addCoupleToCart(${p.id})">
+                <i class="fas fa-heart me-2"></i>Add Couple Set to Cart
+              </button>
+            </div>
+          </div>
+        </div>`;
+    }).join("");
+    setTimeout(() => document.querySelectorAll(".reveal").forEach(e => e.classList.add("visible")), 100);
+  }
+
+  function changeCoupleQty(id, d) {
+    const el = document.getElementById(`cqty-${id}`);
+    if (!el) return;
+    let v = parseInt(el.textContent) + d;
+    if (v < 1) v = 1;
+    el.textContent = v;
+  }
+
+  function addCoupleToCart(productId) {
+    const product = AJ_PRODUCTS.find(p => p.id === productId);
+    if (!product) return;
+    const hisSize = document.getElementById(`his-${productId}`)?.value || "";
+    const herSize = document.getElementById(`her-${productId}`)?.value || "";
+    const qty = parseInt(document.getElementById(`cqty-${productId}`)?.textContent || "1");
+    if (!hisSize || !herSize) { showCartToast("Please select both His and Her sizes!", "warning"); return; }
+    const sizeLabel = `His: ${hisSize} | Hers: ${herSize}`;
+    const existing = cart.find(item => item.id === productId && item.size === sizeLabel);
+    if (existing) { existing.qty += qty; }
+    else { cart.push({ ...product, size: sizeLabel, qty }); }
+    updateCartUI();
+    showCartToast(`${product.name} added to cart!`, "success");
+    openCartSidebar();
+  }
+
+  renderCouples(coupleProducts);
+</script>
+</body>
+</html>

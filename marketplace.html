@@ -3,40 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marketplace — AJ FOOTZ</title>
-  <meta name="description" content="Shop all AJ FOOTZ products. Add to cart and order via WhatsApp.">
+  <title>Men's Shop — AJ FOOTZ</title>
+  <meta name="description" content="Shop all AJ FOOTZ men's handcrafted sandals. Add to cart and order via WhatsApp.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- Announcement Bar (Scrolling) -->
+<!-- Announcement Bar -->
 <div class="marketplace-announcement">
   <div class="marquee-track">
-    <span>✦ New arrivals every week</span>
+    <span>✦ Men's handcrafted sandals — new arrivals every week</span>
     &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
-    <span>All pieces are 100% handcrafted in Kaduna, Nigeria 🇳🇬</span>
-    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
-    <span>FREE delivery on orders above ₦100,000</span>
-    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
-    <span>Custom orders welcome — DM @AJFootz on Instagram</span>
-    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
-    <span>Men's sizes 40-45 | Women's sizes 37-40 | Custom sizing available</span>
-    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
-    <span>We deliver to all 36 states in Nigeria</span>
-    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
-    <span>✦ New arrivals every week</span>
-    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
-    <span>All pieces are 100% handcrafted in Kaduna, Nigeria 🇳🇬</span>
+    <span>All pieces 100% handcrafted in Kaduna, Nigeria 🇳🇬</span>
     &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
     <span>FREE delivery on orders above ₦100,000</span>
     &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
-    <span>Custom orders welcome — DM @AJFootz on Instagram</span>
+    <span>Men's sizes 40–45 | Custom sizing available</span>
     &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
-    <span>Men's sizes 40-45 | Women's sizes 37-40 | Custom sizing available</span>
+    <span>✦ Men's handcrafted sandals — new arrivals every week</span>
     &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
-    <span>We deliver to all 36 states in Nigeria</span>
+    <span>All pieces 100% handcrafted in Kaduna, Nigeria 🇳🇬</span>
+    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
+    <span>FREE delivery on orders above ₦100,000</span>
+    &nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;
+    <span>Men's sizes 40–45 | Custom sizing available</span>
   </div>
 </div>
 
@@ -50,8 +42,9 @@
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav mx-auto gap-1">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-        <li class="nav-item"><a class="nav-link active" href="marketplace.html">Marketplace</a></li>
+        <li class="nav-item"><a class="nav-link active" href="marketplace.html">Men's Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="ladies.html">Ladies' Special</a></li>
+        <li class="nav-item"><a class="nav-link" href="couples.html">Couples</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
@@ -72,13 +65,11 @@
 <!-- Page Hero -->
 <div class="page-hero" style="padding:80px 0 50px">
   <div class="container">
-    <div class="breadcrumb-custom">
-      <a href="index.html">Home</a><span>/</span>Marketplace
-    </div>
-    <h1 class="section-title">AJ FOOTZ <span class="accent">Marketplace</span></h1>
+    <div class="breadcrumb-custom"><a href="index.html">Home</a><span>/</span>Men's Shop</div>
+    <h1 class="section-title">Men's <span class="accent">Sandals</span></h1>
     <div class="gold-line center"></div>
     <p style="color:var(--gray);max-width:500px;margin:0 auto;font-size:.88rem">
-      Browse, pick your size, add to cart — then send your full order to WhatsApp in one tap.
+      Browse all handcrafted men's sandals. Pick your size, add to cart — order via WhatsApp in one tap.
     </p>
   </div>
 </div>
@@ -88,23 +79,23 @@
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
       <div class="filter-tabs" style="margin-bottom:0">
-        <button class="filter-btn active" data-filter="all">All Products</button>
-        <button class="filter-btn" data-filter="shoes">Men's Sandals</button>
-        <button class="filter-btn" data-filter="bags">Women's Bags</button>
+        <button class="filter-btn active" data-filter="all">All Sandals</button>
+        <button class="filter-btn" data-filter="new">New Arrivals</button>
+        <button class="filter-btn" data-filter="best">Best Sellers</button>
       </div>
       <div class="search-wrap" style="min-width:220px">
         <i class="fas fa-search"></i>
-        <input type="text" id="productSearch" class="form-control search-input" placeholder="Search products...">
+        <input type="text" id="productSearch" class="form-control search-input" placeholder="Search men's sandals...">
       </div>
     </div>
   </div>
 </div>
 
 <!-- Products Grid -->
-<section style="padding:50px 0 90px">
+<section style="padding:50px 0 90px;background:var(--black)">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-4">
-      <p style="color:var(--gray);font-size:.82rem;margin:0" id="productCount">Showing 16 products</p>
+      <p style="color:var(--gray);font-size:.82rem;margin:0" id="productCount"></p>
       <div style="color:var(--gray);font-size:.8rem">
         <i class="fas fa-shopping-bag me-1" style="color:var(--gold)"></i>
         Add to cart → Proceed to WhatsApp to order
@@ -114,7 +105,7 @@
   </div>
 </section>
 
-<!-- Cart Overlay & Sidebar -->
+<!-- Cart System -->
 <div id="cartOverlay" onclick="closeCartSidebar()"></div>
 <div id="cartSidebar">
   <div class="cart-header">
@@ -144,46 +135,91 @@
     </button>
   </div>
 </div>
-
-<!-- Floating Cart Button -->
-<button class="cart-float-btn" onclick="openCartSidebar()" title="View Cart">
+<button class="cart-float-btn" onclick="openCartSidebar()">
   <i class="fas fa-shopping-bag"></i>
   <span class="cart-count count-badge" style="display:none">0</span>
 </button>
-
-<!-- Toast Notification -->
 <div class="cart-toast" id="cartToast"></div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">AJ FOOTZ</div>
+        <p class="footer-tagline">"Step on luxury and walk into Grace"</p>
+        <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.8;margin-bottom:20px">
+          Handcrafted footwear and bags from Kaduna, Nigeria. Style. Comfort. Culture. 🇳🇬
+        </p>
+        <div class="footer-social">
+          <a href="https://instagram.com/ajfootz" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/2348000000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="marketplace.html">Men's Shop</a></li>
+          <li><a href="ladies.html">Ladies' Special</a></li>
+          <li><a href="couples.html">Couples</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Collections</div>
+        <ul class="footer-links">
+          <li><a href="marketplace.html">Men's Sandals</a></li>
+          <li><a href="ladies.html">Ladies' Slides</a></li>
+          <li><a href="ladies.html">Ladies' Bags</a></li>
+          <li><a href="couples.html">Couples Sets</a></li>
+          <li><a href="contact.html#custom">Custom Orders</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-heading">Get In Touch</div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Kaduna State, Nigeria</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+234 800 000 0000 (Demo)</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>hello@ajfootz.com (Demo)</span></div>
+        <div class="footer-contact-item"><i class="fab fa-instagram"></i><span>@ajfootz — Preferred contact</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span>AJ FOOTZ</span>. All rights reserved. | Handcrafted with ❤️ in Kaduna, Nigeria 🇳🇬</p>
+    </div>
+  </div>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/products.js"></script>
 <script src="js/cart.js"></script>
 <script src="js/main.js"></script>
 <script>
-  // Render all products with Add to Cart
+  const mensProducts = AJ_PRODUCTS.filter(p => p.category === "shoes");
+  let currentFilter = "all";
+
   function renderMarketplace(products) {
     const grid = document.getElementById("marketplaceGrid");
     const count = document.getElementById("productCount");
     if (!grid) return;
+    if (count) count.textContent = `Showing ${products.length} sandal${products.length !== 1 ? "s" : ""}`;
     if (products.length === 0) {
       grid.innerHTML = `<div class="col-12 text-center py-5" style="color:var(--gray)">
-        <i class="fas fa-search" style="font-size:2rem;margin-bottom:16px;color:var(--border);display:block"></i>
-        No products found.
-      </div>`;
-      if (count) count.textContent = "No products found";
+        <i class="fas fa-search" style="font-size:2rem;margin-bottom:16px;color:var(--border);display:block"></i>No products found.</div>`;
       return;
     }
-    if (count) count.textContent = `Showing ${products.length} product${products.length !== 1 ? "s" : ""}`;
     grid.innerHTML = products.map(product => {
       const badgeHTML = product.badge ? `<span class="product-badge">${product.badge}</span>` : "";
       return `
-        <div class="col product-card-wrap" data-cat="${product.category}" data-name="${product.name.toLowerCase()}">
+        <div class="col product-card-wrap" data-name="${product.name.toLowerCase()}" data-new="${product.isNew}" data-badge="${product.badge||''}">
           <div class="product-card reveal">
             ${badgeHTML}
             <div class="product-img-wrap">
               <img src="${product.image}" alt="${product.name}" class="product-img" loading="lazy">
-              <div class="product-overlay">
-                <p class="product-desc-preview">${product.description}</p>
-              </div>
+              <div class="product-overlay"><p class="product-desc-preview">${product.description}</p></div>
             </div>
             <div class="product-info">
               <h5 class="product-name">${product.name}</h5>
@@ -193,9 +229,9 @@
                 ${product.sizes.map(s => `<option value="${s}">${s}</option>`).join("")}
               </select>
               <div class="d-flex gap-2 align-items-center mb-2">
-                <button class="qty-btn" onclick="changeProductQty(${product.id}, -1)">−</button>
+                <button class="qty-btn" onclick="changeMensQty(${product.id}, -1)">−</button>
                 <span class="qty-val" id="qty-${product.id}">1</span>
-                <button class="qty-btn" onclick="changeProductQty(${product.id}, 1)">+</button>
+                <button class="qty-btn" onclick="changeMensQty(${product.id}, 1)">+</button>
               </div>
               <button class="btn btn-gold w-100"
                 onclick="addToCart(${product.id}, document.getElementById('size-${product.id}').value, parseInt(document.getElementById('qty-${product.id}').textContent))">
@@ -205,56 +241,39 @@
           </div>
         </div>`;
     }).join("");
-
-    // Re-run reveal observer
-    setTimeout(() => {
-      document.querySelectorAll(".reveal").forEach(el => {
-        el.classList.add("visible");
-      });
-    }, 100);
+    setTimeout(() => document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible")), 100);
   }
 
-  // Per-product qty selector
-  function changeProductQty(productId, delta) {
-    const el = document.getElementById(`qty-${productId}`);
+  function changeMensQty(id, d) {
+    const el = document.getElementById(`qty-${id}`);
     if (!el) return;
-    let val = parseInt(el.textContent) + delta;
-    if (val < 1) val = 1;
-    el.textContent = val;
+    let v = parseInt(el.textContent) + d;
+    if (v < 1) v = 1;
+    el.textContent = v;
   }
 
-  // Filter override for search
-  const origFilter = filterProducts;
-  function filterProducts(cat) {
-    const cards = document.querySelectorAll(".product-card-wrap");
-    let visible = 0;
-    cards.forEach(card => {
-      const cardCat = card.dataset.cat;
-      const show = cat === "all" || cardCat === cat;
-      card.style.display = show ? "" : "none";
-      if (show) visible++;
+  // Filter tabs
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentFilter = btn.dataset.filter;
+      applyFilters();
     });
-    const count = document.getElementById("productCount");
-    if (count) count.textContent = `Showing ${visible} product${visible !== 1 ? "s" : ""}`;
-  }
-
-  // Init
-  renderMarketplace(AJ_PRODUCTS);
-
-  // Search with count update
-  document.getElementById("productSearch")?.addEventListener("input", function() {
-    const q = this.value.toLowerCase();
-    const cards = document.querySelectorAll(".product-card-wrap");
-    let visible = 0;
-    cards.forEach(card => {
-      const name = card.dataset.name || "";
-      const show = name.includes(q);
-      card.style.display = show ? "" : "none";
-      if (show) visible++;
-    });
-    const count = document.getElementById("productCount");
-    if (count) count.textContent = `Showing ${visible} product${visible !== 1 ? "s" : ""}`;
   });
+
+  function applyFilters() {
+    let filtered = mensProducts;
+    if (currentFilter === "new") filtered = filtered.filter(p => p.isNew);
+    if (currentFilter === "best") filtered = filtered.filter(p => p.badge === "Best Seller");
+    const q = document.getElementById("productSearch")?.value.toLowerCase() || "";
+    if (q) filtered = filtered.filter(p => p.name.toLowerCase().includes(q));
+    renderMarketplace(filtered);
+  }
+
+  document.getElementById("productSearch")?.addEventListener("input", applyFilters);
+
+  renderMarketplace(mensProducts);
 </script>
 </body>
 </html>
